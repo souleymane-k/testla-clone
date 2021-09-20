@@ -11,7 +11,7 @@ function Header() {
     const cars = useSelector(selectCars)
     return (
         <Container>
-           <a>
+           <a href='#'>
              <img src="/images/logo.svg" alt=""/>
            </a>
            <Menu>
@@ -31,11 +31,11 @@ function Header() {
                {cars && cars.map((car, index) =>
                <li key={index}><a>{car}</a></li>
                )}
-               <li><a>Existing Inventory</a></li>
-               <li><a>Used Inventory</a></li>
-               <li><a>Trade In</a></li>
-               <li><a>Cybertruck</a></li>
-               <li><a>Roadaster</a></li>
+               <li><a href='#'>Existing Inventory</a></li>
+               <li><a href='#'>Used Inventory</a></li>
+               <li><a href='#'>Trade In</a></li>
+               <li><a href='#'>Cybertruck</a></li>
+               <li><a href='#'>Roadaster</a></li>
            </BurgerNavMenu>
         </Container>
     )
@@ -74,11 +74,13 @@ flex-wrap: no-wrap;
 
 `
 const RightMenu = styled.div`
+display:flex;
+align-items:center;
 a{
     font-weight:600;
     text-transform:uppercase;
     margin-right:10px;
-    flex-wrap: no-wrap;
+
     }
 `
 
